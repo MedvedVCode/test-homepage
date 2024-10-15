@@ -6,4 +6,9 @@
 definePageMeta({
 	layout: 'another',
 });
+useSeoMeta({
+	title: 'About Page',
+	description: 'This is About page',
+	ogTitle: 'About Page',
+});
 </script>

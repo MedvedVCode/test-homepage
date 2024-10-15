@@ -2,16 +2,22 @@
 	<div class="container mx-auto max-w-2xl">
 		<header class="flex justify-between items-center my-4">
 			<div>
-				<NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-gray-200">MedvedVCode</NuxtLink>
+				<NuxtLink
+					to="/"
+					class="text-xl font-semibold p-2 hover:bg-gray-200"
+					>MedvedVCode</NuxtLink
+				>
 			</div>
-			<nav >
-				<ul class="flex space-x-4">
-					<li><NuxtLink to="/">Home</NuxtLink></li>
-					<li><NuxtLink to="/about">About</NuxtLink></li>
-					<li><NuxtLink to="/blog">Blog</NuxtLink></li>
-				</ul>
-			</nav>
+			<Menu />
 		</header>
-		<main class="p-4"><slot /></main>
+		<main class="p-2">
+			<slot />
+		</main>
 	</div>
 </template>
+
+<script setup>
+useHead({
+	titleTemplate: '%s | MedvedVCode',	
+})
+</script>
