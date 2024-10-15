@@ -4,13 +4,13 @@
 			<div>
 				<NuxtLink
 					to="/"
-					class="text-xl font-semibold p-2 hover:bg-gray-200"
+					class="text-xl font-semibold p-2 hover:bg-gray-200 uppercase"
 					>MedvedVCode</NuxtLink
 				>
 			</div>
 			<Menu />
 		</header>
-		<main class="p-2">
+		<main class="p-2 mt-10">
 			<slot />
 		</main>
 	</div>

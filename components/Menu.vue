@@ -12,14 +12,15 @@
 				<NuxtLink
 					to="/about"
 					class="link"
-					>About</NuxtLink
 				>
+					About
+				</NuxtLink>
 			</li>
 			<li>
 				<NuxtLink
-					to="/blog"
+					to="/projects"
 					class="link"
-					>Blog</NuxtLink
+					>Projects</NuxtLink
 				>
 			</li>
 		</ul>

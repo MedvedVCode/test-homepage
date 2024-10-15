@@ -4,3 +4,9 @@
 		<ProjectList />
 	</div>
 </template>
+
+<script setup>
+useSeoMeta({
+	title: 'Projects',
+});
+</script>
