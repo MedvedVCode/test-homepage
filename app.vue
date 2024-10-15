@@ -1,3 +1,5 @@
 <template>
-	<h1>Hello Nuxt Crypto</h1>
+	<NuxtLayout>
+		<NuxtPage />
+	</NuxtLayout>
 </template>
