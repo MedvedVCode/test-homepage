@@ -1,14 +1,8 @@
 <template>
-	<div class="custom">
+	<div class="h-screen bg-teal-500 text-white">
 		<div>This is custom layout</div>
 		<slot />
 	</div>
 </template>
 
-<style scoped>
-.custom {
-	height: 100vh;
-	background-color: teal;
-	color: white;
-}
-</style>
+<style scoped></style>

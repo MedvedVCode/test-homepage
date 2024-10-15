@@ -10,7 +10,7 @@ const enableCustomLayout = () => {
 	const layout = useRoute().meta.layout;
 	setPageLayout(layout === 'custom' ? 'another' : 'custom');
 };
-definePageMeta({
-	layout: false,
-});
+// definePageMeta({
+// 	layout: false,
+// });
 </script>
