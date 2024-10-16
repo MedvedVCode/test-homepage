@@ -4,7 +4,7 @@
 
 <script setup>
 definePageMeta({
-	layout: 'another',
+	layout: 'default',
 });
 useSeoMeta({
 	title: 'About Page',
