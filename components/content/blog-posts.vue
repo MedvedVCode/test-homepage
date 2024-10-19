@@ -13,14 +13,7 @@
 </template>
 
 <script setup>
-// const enableCustomLayout = () => {
-// 	const layout = useRoute().meta.layout;
-// 	setPageLayout(layout === 'custom' ? 'another' : 'custom');
-// };
-
 const { data: posts } = await useAsyncData('blog-list', () =>
 	queryContent('/blog').only(['_path', 'title']).find()
 );
-// const posts = await queryContent('/blog').only(['_path', 'title']).find()
-console.log(posts);
 </script>
