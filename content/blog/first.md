@@ -1,6 +1,7 @@
 ---
 title: 'First post'
 publishedAt: 2023-07-13 17:15:00
+toc: true
 ---
 # First post on our website
 ## Introduction 
