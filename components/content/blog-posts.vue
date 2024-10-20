@@ -1,5 +1,4 @@
 <template>
-	<h2>All blog posts list!</h2>
 	<section class="not-prose font-mono">
 		<div class="column text-gray-400 text-sm">
 			<div>date</div>
