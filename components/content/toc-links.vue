@@ -6,11 +6,15 @@
 		>
 			<NuxtLink
 				:to="{ path: route.path, hash: `#${link.id}` }"
-				:class="{ 'ml-4': level }"
+				:class="{ 'ml-4': level, 'text-teal-600 dark:text-teal-300': activeId === link.id }"
 			>
 				{{ link.text }}
 			</NuxtLink>
-			<TocLinks :links="link.children" :level="level + 1"></TocLinks>
+			<TocLinks
+				:links="link.children"
+				:level="level + 1"
+				:active-id="activeId"
+			></TocLinks>
 		</li>
 	</ul>
 </template>
@@ -23,7 +27,10 @@ defineProps({
 		type: Number,
 		default: 0,
 	},
+	activeId: {
+		type: String,
+		default: null,
+	},
 });
 </script>
 
-<style scoped></style>
