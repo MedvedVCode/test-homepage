@@ -14,21 +14,46 @@
 					:to="post._path"
 					class="column hover:bg-gray-100 dark:hover:bg-gray-800"
 				>
-					<div class="text-gray-500">2023</div>
-					<div>{{ post.title }}</div></NuxtLink
-				>
+					<div
+						:class="{
+							'text-white dark:text-gray-900': !post.displayYear,
+							'text-gray-500': post.displayYear,
+						}"
+					>
+						{{ post.year }}
+					</div>
+					<div>
+						{{ post.title }}
+					</div>
+				</NuxtLink>
 			</li>
 		</ul>
 	</section>
 </template>
 
 <script setup>
-const { data: posts } = await useAsyncData('blog-list', () =>
+const { data } = await useAsyncData('blog-list', () =>
 	queryContent('/blog')
 		.where({ _path: { $ne: '/blog' } })
-		.only(['_path', 'title'])
+		.only(['_path', 'title', 'publishedAt'])
+		.sort({ publishedAt: -1 })
 		.find()
 );
+
+const posts = computed(() => {
+	if (!data.value) return [];
+	const result = [];
+	let lastYear = null;
+	for (const post of data.value) {
+		const year = new Date(post.publishedAt).getFullYear();
+		const displayYear = year !== lastYear;
+		post.displayYear = displayYear;
+		post.year = year;
+		result.push(post);
+		lastYear = year;
+	}
+	return result;
+});
 </script>
 
 <style scoped>
