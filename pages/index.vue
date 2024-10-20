@@ -1,5 +1,7 @@
 <template>
-	<h2>Index.vue</h2>
+	<article class="prose dark:prose-invert max-w-none">
+		<ContentDoc path="/" />
+	</article>
 </template>
 
 <script setup>
