@@ -1,6 +1,6 @@
 <template>
 	<h2>All blog posts list!</h2>
-	<section>
+	<section class="not-prose">
 		<ul>
 			<li
 				v-for="post in posts"
@@ -14,6 +14,10 @@
 
 <script setup>
 const { data: posts } = await useAsyncData('blog-list', () =>
-	queryContent('/blog').only(['_path', 'title']).find()
+	queryContent('/blog')
+		.where({ _path: { $ne: '/blog' } })
+		.only(['_path', 'title'])
+		.find()
 );
+console.log(posts);
 </script>
