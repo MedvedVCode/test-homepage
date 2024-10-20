@@ -33,9 +33,10 @@
 </template>
 
 <script setup>
-const route = useRoute();
 const activeId = ref(null);
+
 onMounted(() => {
+	let elements = [];
 	const callback = (entries) => {
 		// console.log(entries);
 		for (const entry of entries) {
@@ -49,10 +50,14 @@ onMounted(() => {
 		root: null,
 		threshold: 0.5,
 	});
-	const elements = document.querySelectorAll('h2, h3');
-	for (const element of elements) {
-		observer.observe(element);
-	}
+	
+	setTimeout(() => {
+		elements = document.querySelectorAll('h2, h3');
+		for (const element of elements) {
+			observer.observe(element);
+		}
+	}, 150);
+
 	onBeforeUnmount(() => {
 		// observer.disconnect();
 		for (const element of elements) {
