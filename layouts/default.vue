@@ -5,7 +5,7 @@
 				<div>
 					<NuxtLink
 						to="/"
-						class="text-xl font-semibold p-2 hover:bg-gray-200 uppercase"
+						class="text-xl font-semibold p-2 hover:bg-gray-200 uppercase dark:hover:bg-gray-800"
 					>
 						MedvedVCode
 					</NuxtLink>
