@@ -1,7 +1,7 @@
 <template>
 	<div class="flex space-x-2 items-center">
 		<div
-			class="text-xs"
+			class="text-xl md:text-xs"
 			v-if="showNextModeLabel"
 		>
 			Change to {{ nextMode }}
@@ -12,7 +12,7 @@
 			@mouseleave="showNextModeLabel = false"
 			@focusin="showNextModeLabel = true"
 			@focusout="showNextModeLabel = false"
-			class="hover:bg-gray-200 dark:hover:bg-gray-400 px-2 py-1"
+			class="hover:bg-gray-200 dark:hover:bg-gray-400 px-2 py-1 text-4xl md:text-base"
 		>
 			{{ nextModeIcon }}
 		</button>
